@@ -20,10 +20,12 @@ def BWBand(w, h):
     for i in range(w):
         for j in range(h):
             image[x + j, y + i] = 255
-    cv2.imshow("image", image)
-    cv2.imwrite("./output/2_3.png", image, [cv2.IMWRITE_PNG_STRATEGY, 10])
-    cv2.waitKey(0)
+
+    return image
 
 
 if __name__ == '__main__':
-    BWBand(7, 11)
+    image = BWBand(7, 11)
+    cv2.imshow("image", image)
+    cv2.imwrite("./output/2_3.png", image, [cv2.IMWRITE_PNG_STRATEGY, 10])
+    cv2.waitKey(0)
