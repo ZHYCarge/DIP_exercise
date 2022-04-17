@@ -26,7 +26,7 @@ while True:
             images.append(cv2.cvtColor(image, cv2.COLOR_RGB2GRAY))
             for a in range(7):
                 images.append(np.zeros([480, 640, 3], np.uint8))
-            print(len(images))
+            # print(len(images))
             for i in range(high):
                 for j in range(width):
                     p = images[0][i, j]  # 256色图像（灰度）
@@ -46,7 +46,7 @@ while True:
                         images[1][i, j] = int(p / 128 + 1) * 128 - 1    # 制作128色图像
             fig = plt.figure(num=1)
             for a in range(8):
-                print(a)
+                # print(a)
                 plt.subplot(2, 4, a+1)
                 plt.title(f'the {tags[a]} image')
                 plt.imshow(images[a], cmap="gray")
