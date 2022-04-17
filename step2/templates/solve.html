@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分析结果</title>
+</head>
+<body>
+<h1>传来的图片如下：</h1>
+<img src="../static/1.png" alt="传入的图像" width="640" height="480">
+<br/>
+
+其中，这副图片匹配度达到{{passes}}%
+<img src="../static/flag/{{where}}" alt="原始图片" width="640" height="480">
+匹配详细信息如下：
+{% for re in resulta %}
+    {{re}}%<br/>
+{% endfor %}
+<br/>
+</body>
+</html>
